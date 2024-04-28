@@ -1,0 +1,37 @@
+/* Custom CSS for login form */
+
+.container {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Adjust label positions */
+label {
+    display: block; /* Display labels as block elements */
+    margin-bottom: 5px; /* Add margin below labels */
+}
+
+.btn-primary {
+    width: 100%;
+    background-color: #25db5c; /* Set custom green color for the button */
+    border-color: #3beb43; /* Set border color same as background color */
+}
+
+.btn-primary:hover {
+    background-color: #33ad52; /* Darker shade of green for hover effect */
+    border-color: #39dd24;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,31 @@
+/* Custom CSS for registration form */
+
+.container {
+    max-width: 400px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    width: 100%;
+    background-color: #25db5c; /* Set custom blue color for the button */
+    border-color: #3beb43; /* Set border color same as background color */
+}
+
+.btn-primary:hover {
+    background-color: #33ad52; /* Darker shade for hover effect */
+    border-color: #39dd24;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .container {
+        max-width: 100%;
+    }
+}

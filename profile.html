@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Welcome to Your Profile</h2>
+        <div class="profile-details">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <p id="name"></p>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <p id="email"></p>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <p id="age"></p>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <p id="dob"></p>
+            </div>
+            <div class="form-group">
+                <label for="contact">Contact:</label>
+                <p id="contact"></p>
+            </div>
+            <!-- Add more profile details as needed -->
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/profile.js"></script>
+    <script>
+        // Fetch user details and populate profile information
+        $(document).ready(function() {
+            // Mock user data (replace with actual data retrieval from backend)
+            var userData = {
+                firstName: "John",
+                lastName: "Doe",
+                email: "johndoe@example.com",
+                dob: "1990-05-15",
+                contact: "1234567890"
+            };
+
+            // Calculate age based on Date of Birth (DOB)
+            var dob = new Date(userData.dob);
+            var today = new Date();
+            var age = today.getFullYear() - dob.getFullYear();
+            var monthDiff = today.getMonth() - dob.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+                age--;
+            }
+
+            // Display user details in the profile
+            $('#name').text(userData.firstName + ' ' + userData.lastName);
+            $('#email').text(userData.email);
+            $('#age').text(age);
+            $('#dob').text(userData.dob);
+            $('#contact').text(userData.contact);
+        });
+    </script>
+</body>
+</html>
